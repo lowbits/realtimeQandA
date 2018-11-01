@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    broadcast(new \App\Events\ExampleEvent);
-    return view('welcome');
-});
+Route::get('/', 'ThreadController@index');
+
+Route::resource('/threads', 'ThreadController');
 
 
 
